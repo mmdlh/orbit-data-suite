@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AlarmPage } from "../components/platform-ui";
+export const Route = createFileRoute("/alarms")({ head:()=>({meta:[{title:"告警管理 — 智擎 DCIM"},{name:"description",content:"实时告警、历史记录、策略与推送配置。"},{property:"og:title",content:"告警管理 — 智擎 DCIM"},{property:"og:description",content:"数据中心告警全流程处置。"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: AlarmPage });

@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PowerPage } from "../components/platform-ui";
+export const Route = createFileRoute("/power")({ head:()=>({meta:[{title:"动力环境 — 智擎 DCIM"},{name:"description",content:"UPS、配电、空调、温湿度和漏水实时监测。"},{property:"og:title",content:"动力环境 — 智擎 DCIM"},{property:"og:description",content:"机房动力与环境设备实时监测。"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: PowerPage });

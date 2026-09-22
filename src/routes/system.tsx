@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SystemPage } from "../components/platform-ui";
+export const Route = createFileRoute("/system")({ head:()=>({meta:[{title:"系统管理 — 智擎 DCIM"},{name:"description",content:"用户权限、资产台账、采集配置与操作日志。"},{property:"og:title",content:"系统管理 — 智擎 DCIM"},{property:"og:description",content:"数据中心系统配置与资产管理。"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: SystemPage });
