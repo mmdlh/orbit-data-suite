@@ -10,33 +10,90 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AlarmsRouteImport } from './routes/alarms'
+import { Route as PowerRouteImport } from './routes/power'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SystemRouteImport } from './routes/system'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AlarmsRoute = AlarmsRouteImport.update({
+  id: '/alarms',
+  path: '/alarms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PowerRoute = PowerRouteImport.update({
+  id: '/power',
+  path: '/power',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SystemRoute = SystemRouteImport.update({
+  id: '/system',
+  path: '/system',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/power': typeof PowerRoute
+  '/reports': typeof ReportsRoute
+  '/security': typeof SecurityRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/power': typeof PowerRoute
+  '/reports': typeof ReportsRoute
+  '/security': typeof SecurityRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/alarms': typeof AlarmsRoute
+  '/power': typeof PowerRoute
+  '/reports': typeof ReportsRoute
+  '/security': typeof SecurityRoute
+  '/system': typeof SystemRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/alarms' | '/power' | '/reports' | '/security' | '/system'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/alarms' | '/power' | '/reports' | '/security' | '/system'
+  id:
+    | '__root__'
+    | '/'
+    | '/alarms'
+    | '/power'
+    | '/reports'
+    | '/security'
+    | '/system'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AlarmsRoute: typeof AlarmsRoute
+  PowerRoute: typeof PowerRoute
+  ReportsRoute: typeof ReportsRoute
+  SecurityRoute: typeof SecurityRoute
+  SystemRoute: typeof SystemRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +105,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/alarms': {
+      id: '/alarms'
+      path: '/alarms'
+      fullPath: '/alarms'
+      preLoaderRoute: typeof AlarmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/power': {
+      id: '/power'
+      path: '/power'
+      fullPath: '/power'
+      preLoaderRoute: typeof PowerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/system': {
+      id: '/system'
+      path: '/system'
+      fullPath: '/system'
+      preLoaderRoute: typeof SystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AlarmsRoute: AlarmsRoute,
+  PowerRoute: PowerRoute,
+  ReportsRoute: ReportsRoute,
+  SecurityRoute: SecurityRoute,
+  SystemRoute: SystemRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
