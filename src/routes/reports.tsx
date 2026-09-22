@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ReportsPage } from "../components/platform-ui";
+export const Route = createFileRoute("/reports")({ head:()=>({meta:[{title:"报表分析 — 智擎 DCIM"},{name:"description",content:"能耗、PUE、历史曲线、巡检与故障统计分析。"},{property:"og:title",content:"报表分析 — 智擎 DCIM"},{property:"og:description",content:"数据中心能源与运行效率分析。"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: ReportsPage });

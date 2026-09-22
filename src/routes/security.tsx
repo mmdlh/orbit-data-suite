@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SecurityPage } from "../components/platform-ui";
+export const Route = createFileRoute("/security")({ head:()=>({meta:[{title:"安防消防 — 智擎 DCIM"},{name:"description",content:"门禁、视频监控、消防主机与入侵报警统一监管。"},{property:"og:title",content:"安防消防 — 智擎 DCIM"},{property:"og:description",content:"机房安防与消防联动监管。"},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}), component: SecurityPage });

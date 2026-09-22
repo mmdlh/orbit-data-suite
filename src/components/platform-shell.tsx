@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Activity, BellRing, Building2, ChartNoAxesCombined, ChevronDown, Clock3, Gauge, Leaf, Menu, Settings2, ShieldCheck, Zap } from "lucide-react";
+import { Activity, BellRing, ChartNoAxesCombined, ChevronDown, Clock3, Gauge, Leaf, Menu, Settings2, ShieldCheck, Zap } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import background from "../assets/datacenter-energy-bg.jpg";
 

@@ -1,11 +1,11 @@
 import { useMemo, useState, type ReactNode } from "react";
 import {
   Activity, AlertTriangle, ArrowDownRight, ArrowUpRight, BatteryCharging,
-  BellRing, Camera, CheckCircle2, ChevronRight, CircleGauge, Clock3,
+  BellRing, Camera, ChevronRight, CircleGauge, Clock3,
   CloudLightning, Cpu, Database, DoorOpen, Droplets, Fan, FileChartColumn,
-  Flame, Gauge, HardDrive, History, KeyRound, LocateFixed, LockKeyhole,
+  Flame, Gauge, HardDrive, History, KeyRound, LocateFixed,
   Network, Radio, RefreshCw, Search, Server, Settings2, ShieldCheck,
-  Snowflake, Thermometer, Users, Waves, Zap,
+  Snowflake, Thermometer, Users, Zap,
 } from "lucide-react";
 import type { EChartsOption } from "echarts";
 import { TechChart } from "./tech-chart";
